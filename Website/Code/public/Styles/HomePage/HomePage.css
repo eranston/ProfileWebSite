@@ -8,36 +8,7 @@ body {
   background: #f4f4f4;
 }
 
-/* ----------  TOP NAVIGATION BAR  ---------- */
 
-/* Top Navigation Bar */
-.top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    padding: 14px 20px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    z-index: 1000;
-  }
-  
-  .top-nav button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 0;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
-  }
-  
-  .top-nav button:hover {
-    color: #cccccc;
-  }
 /* ----------  MAIN PAGE LAYOUT  ---------- */
 
 .page-wrap {
@@ -47,6 +18,27 @@ body {
   display: flex;
   justify-content: center;     /* center horizontally */
   align-items: center;         /* center vertically */
+}
+
+.CV-download-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  font-size: 17px;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 24px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.CV-download-button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ----------  CONTENT CARD  ---------- */
