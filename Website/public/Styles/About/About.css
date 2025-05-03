@@ -1,0 +1,49 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  
+  /* Page Layout */
+.page-wrap {
+  padding-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Main Content Container */
+.container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Text Styling */
+h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.CV-download-link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
