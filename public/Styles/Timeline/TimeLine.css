@@ -1,0 +1,93 @@
+/* ----------  NAV BAR OFFSET FOR TIMELINE  ---------- */
+.page-wrap {
+  padding-top: 140px; /* ensure content clears fixed top navigation bar */
+}
+
+/* ----------  TYPOGRAPHY  ---------- */
+body {
+  font-family: "Times New Roman", serif;
+}
+
+/* ----------  TIMELINE LAYOUT  ---------- */
+.timeline {
+  position: relative;
+  margin: 2rem 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Vertical guideline */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 28px; /* aligns with bullet centres */
+  width: 2px;
+  height: 100%;
+  background: #d0d0d0;
+}
+
+/* Each entry wrapper */
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 60px;
+}
+
+/* Accent bullet */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0d6efd; /* primary accent */
+  box-shadow: 0 0 0 4px #fff; /* white ring so dot pops out */
+}
+
+/* Date label */
+.timeline-date {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+  display: inline-block;
+}
+
+/* Card around each timeline entry */
+.timeline-card {
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.timeline-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.timeline-card h3 small {
+  font-weight: 400;
+  color: #666;
+}
+
+.timeline-card p {
+  margin: 0;
+  color: #444;
+  line-height: 1.5;
+  font-size: 0.97rem;
+}
+
+/* ----------  RESPONSIVE  ---------- */
+@media (max-width: 550px) {
+  .timeline::before { left: 18px; }
+  .timeline-item { padding-left: 48px; }
+  .timeline-item::before { left: 10px; width: 12px; height: 12px; }
+  .timeline-card { padding: 0.9rem 1rem; }
+  .page-wrap { padding-top: 120px; }
+}
