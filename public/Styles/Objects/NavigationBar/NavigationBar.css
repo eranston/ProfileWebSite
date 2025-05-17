@@ -25,3 +25,12 @@
 .top-nav button:hover {
   color: #cccccc;
 }
+
+@media (max-width: 600px) {
+  .top-nav {
+    padding: 2rem 4vw; /* larger padding for touch */
+  }
+  .top-nav button {
+    font-size: 1.3rem; /* larger font for easier tap */
+  }
+}
