@@ -9,11 +9,12 @@ body {
 
 /* ----------  PAGE LAYOUT  ---------- */
 .page-wrap {
-  padding-top: 100px;             /* clear fixed nav */
-  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 140px; /* ensure content clears fixed top navigation bar */
+  box-sizing: border-box;
 }
 
 /* ----------  MAIN CONTENT  ---------- */

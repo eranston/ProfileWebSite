@@ -1,26 +1,29 @@
-/* ----------  GLOBAL RESET / BASE  ---------- */
+
+
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Times New Roman", sans-serif;  /* system-safe font */
+  font-family: "Times New Roman", sans-serif;   /* system-safe font */
   background: #f4f4f4;
 }
 
+
 /* ----------  MAIN PAGE LAYOUT  ---------- */
+
 .page-wrap {
-  padding-top: 100px;   /* space for fixed nav */
+  padding-top: 100px;          /* space for fixed nav */
   min-height: 100vh;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;     /* center horizontally */
+  align-items: center;         /* center vertically */
 }
 
-/* ----------  DOWNLOAD BUTTON  ---------- */
 .CV-download-button {
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   background: linear-gradient(135deg, #007bff, #0056b3);
   font-size: 17px;
   font-weight: 600;
@@ -39,6 +42,7 @@ body {
 }
 
 /* ----------  CONTENT CARD  ---------- */
+
 .container {
   background: #fff;
   padding: 30px 40px;
@@ -50,17 +54,19 @@ body {
 }
 
 /* ----------  PROFILE PHOTO  ---------- */
+
 .profile-photo {
-  width: 200px !important;
+  width: 200px !important;   /* lock the size */
   height: 200px !important;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: cover;         /* crop, don’t distort */
+  border-radius: 50%;        /* perfect circle */
   display: block;
   margin: 1.5rem auto 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ----------  TYPOGRAPHY  ---------- */
+
 h1 {
   margin: 0 0 0.5rem;
   color: #333;
@@ -72,48 +78,3 @@ h1 {
   line-height: 1.6;
 }
 
-/* ----------  RESPONSIVE (phones ≤ 600 px)  ---------- */
-@media (max-width: 600px) {
-
-  /* ---------- GENERAL ---------- */
-  .page-wrap {
-    padding-top: 60px;        /* real navbar ≈ 48-50 px on phones */
-    padding-left: 8px;
-    padding-right: 8px;
-    min-height: auto;         /* drop the “100 vh” push-down */
-  }
-
-  .container {
-    padding: 24px 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,.08);
-    max-width: 100%;          /* let it breathe edge-to-edge */
-  }
-
-  h1 {
-    font-size: 1.5rem;        /* smaller headline */
-    margin-bottom: .75rem;
-  }
-
-  .about {
-    font-size: .95rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .CV-download-link {
-    font-size: .9rem;
-    padding: 10px 24px;
-  }
-
-  /* ---------- TIMELINE ---------- */
-  .timeline           { margin-top: 1rem; }
-  .timeline::before   { left: 12px; }           /* move line inwards */
-  .timeline-item      { padding-left: 44px; margin-bottom: 2rem; }
-  .timeline-item::before {
-    width: 12px; height: 12px; left: 6px;
-  }
-  .timeline-card      { padding: .9rem 1rem; }
-  .timeline-card h3   { font-size: 1.05rem; }
-  .timeline-date      { font-size: .9rem; }
-
-}
