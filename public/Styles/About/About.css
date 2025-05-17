@@ -1,22 +1,22 @@
+/* ----------  BASE  ---------- */
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Times New Roman", sans-serif;
-    background-color: #f4f4f4;
-  }
-  
-  
-  /* Page Layout */
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* ----------  PAGE LAYOUT  ---------- */
 .page-wrap {
-  padding-top: 100px;
+  padding-top: 100px;             /* clear fixed nav */
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-/* Main Content Container */
+/* ----------  MAIN CONTENT  ---------- */
 .container {
   background-color: #fff;
   padding: 30px 40px;
@@ -27,7 +27,7 @@ body {
   text-align: center;
 }
 
-/* Text Styling */
+/* ----------  TYPOGRAPHY  ---------- */
 h1 {
   color: #333;
   margin-bottom: 1rem;
@@ -40,10 +40,38 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
+/* ----------  LINKS  ---------- */
 .CV-download-link {
   text-decoration: none;
   color: #007bff;
   font-size: 16px;
   font-weight: bold;
   transition: color 0.2s ease-in-out;
+}
+
+/* ----------  MOBILE (≤ 600 px)  ---------- */
+@media (max-width: 600px) {
+  .page-wrap {
+    padding-top: 80px;            /* tighter top gap */
+    padding-left: 10px;           /* small side gutters */
+    padding-right: 10px;
+  }
+
+  .container {
+    padding: 24px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    max-width: 95%;
+  }
+
+  h1 { font-size: 1.4rem; }
+
+  .about { 
+    font-size: 0.95rem; 
+    margin-bottom: 1.25rem;
+  }
+
+  .CV-download-link {
+    font-size: 15px;
+  }
 }
