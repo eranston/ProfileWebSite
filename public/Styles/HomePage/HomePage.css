@@ -74,31 +74,46 @@ h1 {
 
 /* ----------  RESPONSIVE (phones ≤ 600 px)  ---------- */
 @media (max-width: 600px) {
+
+  /* ---------- GENERAL ---------- */
   .page-wrap {
-    padding-top: 80px;                 /* clear fixed nav but tighter */
-    flex-direction: column;            /* stack if you add more sections later */
-    align-items: stretch;              /* full-width card */
+    padding-top: 60px;        /* real navbar ≈ 48-50 px on phones */
+    padding-left: 8px;
+    padding-right: 8px;
+    min-height: auto;         /* drop the “100 vh” push-down */
   }
 
   .container {
     padding: 24px 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-    max-width: 95%;                    /* breathe at edges */
+    box-shadow: 0 0 10px rgba(0,0,0,.08);
+    max-width: 100%;          /* let it breathe edge-to-edge */
   }
 
-  .profile-photo {
-    width: 140px !important;
-    height: 140px !important;
-    margin-top: 1rem;
+  h1 {
+    font-size: 1.5rem;        /* smaller headline */
+    margin-bottom: .75rem;
   }
 
-  .CV-download-button {
-    font-size: 15px;
-    padding: 10px 22px;
-    margin-top: 20px;
+  .about {
+    font-size: .95rem;
+    margin-bottom: 1.25rem;
   }
 
-  h1 { font-size: 1.45rem; }
-  .about { font-size: 0.95rem; }
+  .CV-download-link {
+    font-size: .9rem;
+    padding: 10px 24px;
+  }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline           { margin-top: 1rem; }
+  .timeline::before   { left: 12px; }           /* move line inwards */
+  .timeline-item      { padding-left: 44px; margin-bottom: 2rem; }
+  .timeline-item::before {
+    width: 12px; height: 12px; left: 6px;
+  }
+  .timeline-card      { padding: .9rem 1rem; }
+  .timeline-card h3   { font-size: 1.05rem; }
+  .timeline-date      { font-size: .9rem; }
+
 }
